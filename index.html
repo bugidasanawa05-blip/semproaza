@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Sempro 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Canvas Kembang Api -->
+  <canvas id="fireworksCanvas"></canvas>
+
+  <!-- Container Balon/Emoji Melayang -->
+  <div class="floating-elements" id="floatingElements"></div>
+
+  <!-- TAMPILAN 1: KOTAK MISTERI -->
+  <section id="step-mystery" class="screen-center">
+    <div class="mystery-box-wrapper" onclick="startJourney()">
+      <div class="glow-effect"></div>
+      <div class="gift-box">
+        <i class="fa-solid fa-box-open box-icon"></i>
+        <div class="tap-badge">Buka Dong! 🎁</div>
+      </div>
+    </div>
+    <p class="mystery-text">Ada sesuatu buat Azza 
+        Klik kotaknya!</p>
+  </section>
+
+  <!-- TAMPILAN 2: KATA-KATA BERGERAK / TYPING EFFECT -->
+  <section id="step-typing" class="screen-center hidden">
+    <div class="typing-card">
+      <div class="avatar-badge">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div id="typewriterText" class="typing-text"></div>
+      <button id="btnNextMain" class="btn-primary hidden" onclick="goToMainContent()">
+        Lihat Kejutan Utamanya! ✨
+      </button>
+    </div>
+  </section>
+
+  <!-- TAMPILAN 3: HALAMAN UTAMA -->
+  <section id="step-main" class="main-container hidden">
+    <!-- Header Hero -->
+    <header class="hero-section">
+      <span class="pill-tag">SEMPROTULATIONS! 🎓</span>
+      <h1 class="main-title">Selamat Sempro, <span class="highlight">Nur Azza Nadia!</span></h1>
+      <p class="main-subtitle">Satu langkah lebih dekat menuju Kebebasan</p>
+    </header>
+
+    <!-- Interactive Quotes / Jokes Generator -->
+    <div class="jokes-card">
+      <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+      <p id="funnyQuote" class="quote-body">"Selamat ya udah Sempro! Ingat, Sempro itu baru permulaan. Bab selanjutnya adalah ajang adu nasib balasan WA dosen."</p>
+      <button class="btn-secondary" onclick="changeQuote()">
+        <i class="fa-solid fa-dice"></i> Klik Buat Baca Kata-Kata Ngakak Lainnya!
+      </button>
+    </div>
+
+    <!-- Media Gallery (Foto & Video) -->
+    <!-- Media Gallery (Foto & Video) -->
+    <section class="gallery-section">
+      <h2 class="section-title"><i class="fa-solid fa-film"></i> Momen Kenangan Sempro Azza</h2>
+      
+      <div class="gallery-grid">
+        <!-- Foto 1 (Di Lorong Kampus) -->
+        <div class="media-card">
+          <div class="media-frame">
+            <img src="foto1.jpeg" alt="Azza Sempro Lorong" class="gallery-img">
+          </div>
+          <p class="caption">Muka senyum, tapi batin lagi ngitung sisa tabungan buat print revisian</p>
+        </div>
+
+        <!-- Foto 2 (Berdiri di Depan Papan Bunga) -->
+        <div class="media-card">
+          <div class="media-frame">
+            <img src="foto2.jpeg" alt="Azza Sempro Papan Bunga" class="gallery-img">
+          </div>
+          <p class="caption">Gaya dulu depan papan bunga, urusan bales WA dosen pembimbing dipikir nanti</p>
+        </div>
+
+        <!-- Foto 3 (Duduk Bersama Hadiah) -->
+        <div class="media-card">
+          <div class="media-frame">
+            <img src="foto3.jpeg" alt="Azza Sempro Duduk" class="gallery-img">
+          </div>
+          <p class="caption">Duduk selonjoran dulu, kaki udah gempor ngadepin pertanyaan bertubi-tubi penguji</p>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+
+  <!-- Elemen Audio Musik / Backsound -->
+<audio id="bgMusic" src="backsound.mp3" preload="autoplay" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
